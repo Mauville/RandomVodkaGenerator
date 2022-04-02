@@ -4,10 +4,10 @@ import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-public class MidSquaresGenerator implements Generator {
+public class MidSquaresNumberGenerator extends BasicNumberGeneratorBehaviour {
     int seed;
 
-    public MidSquaresGenerator(int seed) {
+    public MidSquaresNumberGenerator(int seed) {
         int lenN = (int) (Math.log10(seed) + 1);
         if (lenN != 4) {
             throw new InvalidParameterException("Seed must be 4 digit.");
@@ -15,7 +15,7 @@ public class MidSquaresGenerator implements Generator {
         this.seed = seed;
     }
 
-    private int nextInteger(int seed) {
+    public int nextInteger(int seed) {
         // Square the seed
         int n = (int) Math.pow(seed, 2);
         // Reduce length to 8 nums
@@ -32,25 +32,11 @@ public class MidSquaresGenerator implements Generator {
         return n;
     }
 
-    @Override
-    public ArrayList<Float> generate(int n) {
-        ArrayList<Integer> result = new ArrayList<>();
-        result.add(seed);
-        for (int i = 0; i <= n; i++) {
-            int next = nextInteger(result.get(i));
-            if (next == seed) {
-                return floatify(result);
-            }
-            result.add(seed);
-        }
-        return floatify(result);
-    }
-
     /**
      * @param ints An Integer arraylist to convert to floats
      * @return The ArrayList, converted to Floats
      */
-    private ArrayList<Float> floatify(ArrayList<Integer> ints) {
+    public ArrayList<Float> floatify(ArrayList<Integer> ints) {
         return (ArrayList<Float>) ints.stream().map(Float::valueOf).collect(Collectors.toList());
     }
 }

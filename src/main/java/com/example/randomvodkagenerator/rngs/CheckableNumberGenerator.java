@@ -1,5 +1,5 @@
 package com.example.randomvodkagenerator.rngs;
 
-public interface CheckableGenerator extends Generator{
+public interface CheckableNumberGenerator extends NumberGenerator {
     public boolean validate(CheckTypes c);
 }
