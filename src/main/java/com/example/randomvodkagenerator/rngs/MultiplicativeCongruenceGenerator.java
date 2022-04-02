@@ -6,8 +6,4 @@ public class MultiplicativeCongruenceGenerator extends CongruentialNumberGenerat
         op = (x1 -> (a * x1) % m);
     }
 
-    @Override
-    public boolean validate(CheckTypes c) {
-        return false;
-    }
 }

@@ -9,9 +9,6 @@ public abstract class CongruentialNumberGenerator extends BasicNumberGeneratorBe
     int m;
     Function<Integer, Integer> op;
 
-    @Override
-    public abstract boolean validate(CheckTypes c);
-
     public CongruentialNumberGenerator(int seed, int a, int m) {
         super(seed);
         this.a = a;

@@ -1,6 +1,5 @@
 package com.example.randomvodkagenerator.rngs;
 
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
@@ -36,11 +35,6 @@ public class CombinedMultiplicativeNumberGenerator implements FloatifyBehaviour,
     @Override
     public ArrayList<Float> floatify(ArrayList<Integer> result) {
         return result.stream().map(xi -> xi == 0 ? (float) ((m1 - 1) / m1) : (float) (xi / m1)).collect(Collectors.toCollection(ArrayList::new));
-    }
-
-    @Override
-    public boolean validate(CheckTypes c) {
-        return false;
     }
 
     @Override
