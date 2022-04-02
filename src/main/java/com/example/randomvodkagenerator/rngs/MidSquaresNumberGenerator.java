@@ -4,10 +4,11 @@ import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-public class MidSquaresNumberGenerator extends BasicNumberGeneratorBehaviour {
+public class MidSquaresNumberGenerator extends BasicNumberGeneratorBehaviour implements FloatifyBehaviour {
     int seed;
 
     public MidSquaresNumberGenerator(int seed) {
+        super(seed);
         int lenN = (int) (Math.log10(seed) + 1);
         if (lenN != 4) {
             throw new InvalidParameterException("Seed must be 4 digit.");
@@ -36,7 +37,8 @@ public class MidSquaresNumberGenerator extends BasicNumberGeneratorBehaviour {
      * @param ints An Integer arraylist to convert to floats
      * @return The ArrayList, converted to Floats
      */
+    @Override
     public ArrayList<Float> floatify(ArrayList<Integer> ints) {
-        return (ArrayList<Float>) ints.stream().map(Float::valueOf).collect(Collectors.toList());
+        return (ArrayList<Float>) ints.stream().map(x -> (float) (x * .0001)).collect(Collectors.toList());
     }
 }

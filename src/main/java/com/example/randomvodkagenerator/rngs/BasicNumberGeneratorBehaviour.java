@@ -2,8 +2,12 @@ package com.example.randomvodkagenerator.rngs;
 
 import java.util.ArrayList;
 
-public abstract class BasicNumberGeneratorBehaviour implements NumberGenerator{
+public abstract class BasicNumberGeneratorBehaviour implements NumberGenerator {
     int seed;
+
+    public BasicNumberGeneratorBehaviour(int seed) {
+        this.seed = seed;
+    }
 
     abstract ArrayList<Float> floatify(ArrayList<Integer> result);
 
@@ -18,7 +22,7 @@ public abstract class BasicNumberGeneratorBehaviour implements NumberGenerator{
             if (next == seed) {
                 return floatify(result);
             }
-            result.add(seed);
+            result.add(next);
         }
         return floatify(result);
     }

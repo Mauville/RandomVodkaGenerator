@@ -42,6 +42,7 @@ public class NumberGeneratorMath {
 
     /**
      * Execute a Hull Dobel Test
+     * <p>
      * Will throw an InvalidParameterException whenever one of the following tests fails:
      * Check 4%m == 0 and 4%(a-1) == 0
      * Assert GCD(m,a) == 1
@@ -50,18 +51,18 @@ public class NumberGeneratorMath {
      * @param a Addition constant
      * @param m Modulo constant
      */
-    protected static void HullDobelTest(int a, int m) {
+    protected static void HullDobelTest(int a, int c, int m) {
         // Check 4%m == 0 and 4%a == 0
-        if (!(4 % m == 0 && 4 % (a - 1) == 0))
+        if (!(m % 4 == 0 && (a - 1) % 4 == 0))
             throw new InvalidParameterException("Hull Dobel Failed: Division by 4");
         // Assert GCD == 1
-        if (NumberGeneratorMath.GCD(a, m) != 1)
+        if (NumberGeneratorMath.GCD(c, m) != 1)
             throw new InvalidParameterException("Hull Dobel Failed: GCD");
         // Generate primes until max(a,m) and check rule for every prime. Fail if rule not satisfied
         ArrayList<Integer> primes = NumberGeneratorMath.generatePrimesTillN(Math.max(a, m));
         for (Integer prime : primes
         ) {
-            if ((prime % m == 0 && prime % (a - 1) == 0))
+            if ((m % prime == 0 && (a - 1) % prime == 0))
                 return;
 
         }
