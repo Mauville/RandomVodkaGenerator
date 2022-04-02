@@ -1,0 +1,8 @@
+Método de los Centros Cuadrados
+• Método Congruencial
+• Método Congruencial Mixto incluye la validación del Teorema de HULL-DOBELL
+• Generador Multiplicativo
+
+• Método Congruencial lineal Combinado
+NOTA: Los casos MC, MCM y GM deben tener la opción de validar la aceptación o rechazo
+con las pruebas de Chi-Cuadrada y Kolmogorov-Smirnov.
