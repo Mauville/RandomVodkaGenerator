@@ -1,6 +1,6 @@
 package com.example.randomvodkagenerator.rngs;
 
-import java.security.InvalidParameterException;
+import java.security.IllegalArgumentException;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
@@ -11,7 +11,7 @@ public class MidSquaresNumberGenerator extends BasicNumberGeneratorBehaviour imp
         super(seed);
         int lenN = (int) (Math.log10(seed) + 1);
         if (lenN != 4) {
-            throw new InvalidParameterException("Seed must be 4 digit.");
+            throw new IllegalArgumentException("Seed must be 4 digit.");
         }
         this.seed = seed;
     }

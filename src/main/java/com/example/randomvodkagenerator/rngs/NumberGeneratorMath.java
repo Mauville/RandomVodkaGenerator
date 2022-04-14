@@ -1,6 +1,5 @@
 package com.example.randomvodkagenerator.rngs;
 
-import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -54,10 +53,10 @@ public class NumberGeneratorMath {
     protected static void HullDobelTest(int a, int c, int m) {
         // Check 4%m == 0 and 4%a == 0
         if (!(m % 4 == 0 && (a - 1) % 4 == 0))
-            throw new InvalidParameterException("Hull Dobel Failed: Division by 4");
+            throw new IllegalArgumentException("Hull Dobel Failed: Division by 4");
         // Assert GCD == 1
         if (NumberGeneratorMath.GCD(c, m) != 1)
-            throw new InvalidParameterException("Hull Dobel Failed: GCD");
+            throw new IllegalArgumentException("Hull Dobel Failed: GCD");
         // Generate primes until max(a,m) and check rule for every prime. Fail if rule not satisfied
         ArrayList<Integer> primes = NumberGeneratorMath.generatePrimesTillN(Math.max(a, m));
         for (Integer prime : primes
@@ -66,6 +65,6 @@ public class NumberGeneratorMath {
                 return;
 
         }
-        throw new InvalidParameterException("Hull Dobel Failed: Prime");
+        throw new IllegalArgumentException("Hull Dobel Failed: Prime");
     }
 }
