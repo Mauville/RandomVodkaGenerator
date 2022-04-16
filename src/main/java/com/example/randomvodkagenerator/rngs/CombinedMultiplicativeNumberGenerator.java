@@ -50,6 +50,9 @@ public class CombinedMultiplicativeNumberGenerator implements FloatifyBehaviour,
      * Checks if every seed of every generator has repeated.
      */
     private boolean hasLooped(int index) {
+        if (index == 0) {
+            return false;
+        }
         for (List<Integer> integers : table) {
             if (!Objects.equals(integers.get(index), integers.get(0))) {
                 return false;

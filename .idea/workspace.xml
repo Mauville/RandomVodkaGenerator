@@ -10,16 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73da6a0f-839e-4be5-8a2d-ffe5c9b30c3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/RandomVodkaGenerator_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomVodkaGenerator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RandomVodkaGenerator.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/randomvodkagenerator/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/CombinedMultiplicativeNumberGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/CombinedMultiplicativeNumberGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +87,7 @@
       <recent name="com.example.randomvodkagenerator.rngs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\X220\Desktop\RandomVodkaGenerator" />
       <recent name="C:\Users\X220\Desktop\RandomVodkaGenerator\src\main" />
       <recent name="C:\Users\X220\Desktop\RandomVodkaGenerator\src" />
       <recent name="C:\Users\X220\Desktop\RandomVodkaGenerator\src\main\java\com\example\randomvodkagenerator\rngs" />
@@ -116,7 +111,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Demo">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.randomvodkagenerator.rngs.Demo" />
       <module name="RandomVodkaGenerator" />
@@ -130,7 +125,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MidSquaresGeneratorTest.generate_1337_sequence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.randomvodkagenerator.Main" />
       <module name="RandomVodkaGenerator" />
       <extension name="coverage">
         <pattern>
@@ -138,53 +134,36 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.randomvodkagenerator" />
-      <option name="MAIN_CLASS_NAME" value="com.example.randomvodkagenerator.MidSquaresGeneratorTest" />
-      <option name="METHOD_NAME" value="generate_1337_sequence" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scratch (1)" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Scratch" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="RandomVodkaGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/RandomVodkaGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <method v="2" />
     </configuration>
-    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Scratch" />
-      <module name="RandomVodkaGenerator" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="RandomVodkaGenerator-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/RandomVodkaGenerator-1.0-SNAPSHOT.jar" />
+      <method v="2" />
     </configuration>
-    <configuration name="scratch_2" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="scratch_2" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="RandomVodkaGenerator.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/RandomVodkaGenerator_jar/RandomVodkaGenerator.jar" />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.Demo" />
-      <item itemvalue="Java Scratch.Scratch" />
-      <item itemvalue="Java Scratch.scratch_2" />
-      <item itemvalue="Java Scratch.Scratch (1)" />
-      <item itemvalue="JUnit.MidSquaresGeneratorTest.generate_1337_sequence" />
+      <item itemvalue="JAR Application.RandomVodkaGenerator.jar" />
+      <item itemvalue="JAR Application.RandomVodkaGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <item itemvalue="JAR Application.RandomVodkaGenerator-1.0-SNAPSHOT.jar" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JAR Application.RandomVodkaGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+        <item itemvalue="JAR Application.RandomVodkaGenerator-1.0-SNAPSHOT.jar" />
+        <item itemvalue="JAR Application.RandomVodkaGenerator.jar" />
         <item itemvalue="Application.Demo" />
-        <item itemvalue="Java Scratch.Scratch" />
-        <item itemvalue="Java Scratch.Scratch (1)" />
-        <item itemvalue="Java Scratch.scratch_2" />
-        <item itemvalue="JUnit.MidSquaresGeneratorTest.generate_1337_sequence" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +182,7 @@
       <workItem from="1649964009333" duration="11140000" />
       <workItem from="1649982608818" duration="5699000" />
       <workItem from="1650067708548" duration="16698000" />
-      <workItem from="1650148955903" duration="1105000" />
+      <workItem from="1650148955903" duration="3116000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1648869915230</created>
@@ -282,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650148256106</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Packinging Complete">
+      <created>1650150137594</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1650150137595</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +288,8 @@
     <MESSAGE value="Sketch buggy Smirnov Code" />
     <MESSAGE value="Finish CombinedMultiplicativeNumberGenerator.java" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Packinging Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Packinging Complete" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
