@@ -2,6 +2,8 @@ package com.example.randomvodkagenerator.rngs;
 
 import java.util.*;
 
+import org.apache.commons.math3.stat.inference.ChiSquareTest;
+
 public class Validator {
 
     private static final HashMap<Double, double[]> ksTable = new HashMap<>();
@@ -67,29 +69,77 @@ public class Validator {
         });
     }
 
-//    private static float[][] binArray(){}
-
-    public static boolean ChiSq(ArrayList<Float> vals, float a) {
+    /**
+     * Bins an array into classes according to ChiSq procedure.
+     *
+     * @param vals An arraylist containing the RNG output
+     * @return A HashMap, with MAX of the class as the key and the matches as the value.
+     */
+    private static HashMap<Float, Long> binArray(ArrayList<Float> vals) {
+        // FIXME Bug when range is == 1
+        // this happens both 0 and 1 are in the dist.
         Collections.sort(vals);
         int n = vals.size();
         int range = Math.round(Collections.max(vals) - Collections.min(vals));
         int k = Math.round((float) (1 + 3.222 * Math.log10(n)));
         float _class = (float) range / k;
-        // TODO is lambda the correct way for this thing?
-        float lambda = (float) vals.stream().mapToDouble(x -> x).sum() / n;
-        // segment array into classes
-        // homogenize classes
-        // create the Prob col
-        // create the freq col
-        // create the FE col
-        // create the chi col
-        // get sum(chi)
-        // get chi
-        // return sum(chi)<chi
-        return false;
+
+        HashMap<Float, Long> bins = new HashMap<>();
+        float currentMax = Collections.min(vals) + _class;
+        for (Float f : vals
+        ) {
+            if (f > currentMax) {
+                // FIXME Shitty fix for less than 5 matches per class
+                // Expected probability will not be uniform for the merged bins.
+                // This requires doubling the probability for them.
+                // so expected_bin_prob = n/class
+                // m_merged_expected_bin_prob = n/class * m
+//                if (bins.get(currentMax) < 5) {
+//                    bins.put(currentMax + _class, bins.get(currentMax));
+//                }
+                currentMax += _class;
+                continue;
+            }
+            if (bins.containsKey(currentMax)) {
+                bins.put(currentMax, bins.get(currentMax) + 1L);
+            } else
+                bins.put(currentMax, 1L);
+
+        }
+        return bins;
+
     }
 
-    public static double smirnovLookup(double alpha, int n) {
+    private static double[] buildExpectedArray(int len) {
+        float expectedsize = 1f / len;
+        double expected[] = {};
+        for (int i = 0; i < len; i++) {
+            expected[i] = expectedsize;
+        }
+        return expected;
+    }
+
+    public static boolean ChiSq(ArrayList<Float> vals, double a) {
+        // Bin the array into classes.
+        // TODO This will not fix classes with less than 5 hits
+        HashMap<Float, Long> bins = binArray(vals);
+        //
+        long[] observed = Arrays.stream(bins.values().toArray(new Long[0])).mapToLong(Long::longValue).toArray();
+
+        // Create the expected distribution. Since we're using RNGs, we use the uniform distribution.
+        // This means each bin has the same probability of happenstance.
+        double[] expected = buildExpectedArray(bins.keySet().size());
+
+        ChiSquareTest chiSquareTest = new ChiSquareTest();
+        return chiSquareTest.chiSquareTest(expected, observed, a);
+    }
+
+
+    /**
+     * Lookup a value on the Smirnov Tables
+     * Will calculate on values exceeding 40
+     */
+    private static double smirnovLookup(double alpha, int n) {
         if (!ksTable.containsKey(alpha)) {
             throw new IllegalArgumentException("Unsupported Alpha");
         }
@@ -111,6 +161,10 @@ public class Validator {
 
     }
 
+
+    /**
+     * Smirnov Validation for a set of generated values.
+     */
     public static boolean Smirnov(ArrayList<Float> vals, float a) {
         Collections.sort(vals);
         int n = vals.size();

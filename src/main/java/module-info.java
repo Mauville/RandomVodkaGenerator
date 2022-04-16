@@ -5,6 +5,7 @@ module com.example.randomvodkagenerator {
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
     requires org.junit.jupiter.api;
+    requires commons.math3;
 
     opens com.example.randomvodkagenerator to javafx.fxml;
     exports com.example.randomvodkagenerator;
