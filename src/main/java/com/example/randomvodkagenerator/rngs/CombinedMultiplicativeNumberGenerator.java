@@ -3,24 +3,29 @@ package com.example.randomvodkagenerator.rngs;
 import java.math.BigInteger;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 
-public class CombinedMultiplicativeNumberGenerator implements FloatifyBehaviour, CheckableNumberGenerator {
+public class CombinedMultiplicativeNumberGenerator implements FloatifyBehaviour, NumberGenerator {
 
+    private final ArrayList<Integer> seeds;
     private final ArrayList<Integer> multiplicators;
     private final ArrayList<Integer> modulos;
-    private ArrayList<ArrayList<Integer>> table;
+    private final int self_modulo;
+    private ArrayList<List<Integer>> table = new ArrayList<>();
 
-    int m1;
 
-    public CombinedMultiplicativeNumberGenerator(ArrayList<Integer> multiplicators, ArrayList<Integer> modulos) {
-        if (multiplicators.size() != modulos.size()) {
-            throw new InvalidParameterException("Mismatched number of constants: Multiplicators=" + multiplicators.size() + " Modulos=" + modulos.size());
+    public CombinedMultiplicativeNumberGenerator(Integer[] seeds, Integer[] multiplicators, Integer[] modulos, int self_modulo) {
+        if (multiplicators.length != modulos.length) {
+            throw new InvalidParameterException("Mismatched number of constants: Multiplicators=" + multiplicators.length + " Modulos=" + modulos.length);
         }
-        m1 = modulos.get(0);
-        this.multiplicators = multiplicators;
-        this.modulos = modulos;
+        this.multiplicators = new ArrayList<>(Arrays.asList(multiplicators));
+        this.modulos = new ArrayList<>(Arrays.asList(modulos));
+        this.seeds = new ArrayList<>(Arrays.asList(seeds));
+        this.self_modulo = self_modulo;
     }
 
     public BigInteger getPeriod() {
@@ -34,35 +39,36 @@ public class CombinedMultiplicativeNumberGenerator implements FloatifyBehaviour,
 
     @Override
     public ArrayList<Float> floatify(ArrayList<Integer> result) {
-        return result.stream().map(xi -> xi == 0 ? (float) ((m1 - 1) / m1) : (float) (xi / m1)).collect(Collectors.toCollection(ArrayList::new));
+        Float m1 = Float.valueOf(modulos.get(0));
+        return result.stream().map(xi -> xi == 0 ? ((m1 - 1) / m1) :  (xi / m1)).collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public ArrayList<Float> generate(int n) {
-        ArrayList<Integer> result = new ArrayList<>();
-        populateTable();
-        // TODO TEST
-        for (int i = 0; i < 100; i++) {
-            int temp = table.get(0).get(i);
-            for (int j = 1; j < multiplicators.size(); j++) {
-                temp -= table.get(j).get(i);
-            }
-            result.add(temp);
-        }
-        return floatify(result);
-
+        return floatify(rawGenerate(n));
     }
 
-    // FIXME Nasty function
-    private void populateTable() {
-        // TODO how do u pick a seed for these generators?
+    @Override
+    public ArrayList<Integer> rawGenerate(int n) {
+        ArrayList<Integer> result = new ArrayList<>();
+        populateTable(n);
+        // TODO bound with period
+        for (int i = 0; i < n; i++) {
+            int temp = table.get(0).get(i);
+            for (int j = 1; j < table.size(); j++) {
+                temp -= table.get(j).get(i);
+            }
+            // FIXME teacher's modulo doesn't work as it should in Java
+            result.add(temp % self_modulo);
+        }
+        return result;
+    }
+
+    private void populateTable(int entries) {
         ArrayList<NumberGenerator> generators = new ArrayList<>();
         for (int i = 0; i < multiplicators.size(); i++) {
-            int seed = (ThreadLocalRandom.current().nextInt(0, 10 + 1));
-            generators.add(new MultiplicativeCongruenceGenerator(seed, multiplicators.get(i), modulos.get(i)));
-            //FIXME hardcoded 100 value
-            //FIXME values need to be re-int'ed
-            table.add((ArrayList<Integer>) generators.get(i).generate(100).stream().mapToInt(x -> (int) (x * 1000)).boxed().collect(Collectors.toList()));
+            generators.add(new MultiplicativeCongruenceGenerator(seeds.get(i), multiplicators.get(i), modulos.get(i)));
+            table.add(generators.get(i).rawGenerate(entries));
         }
     }
 }

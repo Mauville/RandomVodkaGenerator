@@ -3,7 +3,7 @@ package com.example.randomvodkagenerator.rngs;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-public class MidSquaresNumberGenerator extends BasicNumberGeneratorBehaviour implements FloatifyBehaviour {
+public class MidSquaresNumberGenerator extends BasicNumberGeneratorBehaviour {
     int seed;
 
     public MidSquaresNumberGenerator(int seed) {

@@ -76,11 +76,11 @@ public class Validator {
      * @return A HashMap, with MAX of the class as the key and the matches as the value.
      */
     private static HashMap<Float, Long> binArray(ArrayList<Float> vals) {
-        // FIXME Bug when range is == 1
-        // this happens both 0 and 1 are in the dist.
         Collections.sort(vals);
         int n = vals.size();
         int range = Math.round(Collections.max(vals) - Collections.min(vals));
+        // FIXME Bug when range is == 1
+        // this happens both 0 and 1 are in the dist.
         int k = Math.round((float) (1 + 3.222 * Math.log10(n)));
         float _class = (float) range / k;
 
@@ -112,7 +112,7 @@ public class Validator {
 
     private static double[] buildExpectedArray(int len) {
         float expectedsize = 1f / len;
-        double expected[] = {};
+        double[] expected = new double[len];
         for (int i = 0; i < len; i++) {
             expected[i] = expectedsize;
         }

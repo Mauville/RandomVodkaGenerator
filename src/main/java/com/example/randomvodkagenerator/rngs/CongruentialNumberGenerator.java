@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public abstract class CongruentialNumberGenerator extends BasicNumberGeneratorBehaviour implements CheckableNumberGenerator, FloatifyBehaviour {
+public abstract class CongruentialNumberGenerator extends BasicNumberGeneratorBehaviour implements  NumberGenerator {
     int a;
     int m;
     Function<Integer, Integer> op;
