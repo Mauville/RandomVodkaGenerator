@@ -1,0 +1,9 @@
+RNGs in Java
+
+1. Mid Squares Generator
+2. Congruential Method
+3. Mixed Congruential Method includes the validation of the HULL-DOBELL Theorem.
+4. Multiplicative Generator
+5. Combined Linear Congruential Method
+
+Additionally, tests for Chi-Squared and Kolmogorov-Smirnov are provided.

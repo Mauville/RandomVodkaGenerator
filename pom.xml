@@ -74,7 +74,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.randomvodkagenerator/com.example.randomvodkagenerator.HelloApplication
+                                com.example.randomvodkagenerator/com.example.randomvodkagenerator.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
