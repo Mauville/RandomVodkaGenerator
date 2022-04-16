@@ -1,8 +1,11 @@
 package com.example.randomvodkagenerator.rngs;
 
-import java.util.*;
-
 import org.apache.commons.math3.stat.inference.ChiSquareTest;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 
 public class Validator {
 
@@ -123,7 +126,6 @@ public class Validator {
         // Bin the array into classes.
         // TODO This will not fix classes with less than 5 hits
         HashMap<Float, Long> bins = binArray(vals);
-        //
         long[] observed = Arrays.stream(bins.values().toArray(new Long[0])).mapToLong(Long::longValue).toArray();
 
         // Create the expected distribution. Since we're using RNGs, we use the uniform distribution.
