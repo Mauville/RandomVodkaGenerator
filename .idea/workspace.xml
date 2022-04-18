@@ -10,17 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73da6a0f-839e-4be5-8a2d-ffe5c9b30c3a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_controlsfx_controlsfx_11_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kordamp_bootstrapfx_bootstrapfx_core_0_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_13_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_13_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_13_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_13_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_13_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_13_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_13_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_13_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RandomVodkaGenerator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RandomVodkaGenerator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,12 +57,15 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="27DhNTobNIavWyPaRprkmUqcNVP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
@@ -81,6 +78,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15429688" />
@@ -118,8 +116,8 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.randomvodkagenerator.rngs.Demo" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.randomvodkagenerator.Main" />
       <module name="RandomVodkaGenerator" />
       <extension name="coverage">
         <pattern>
@@ -131,12 +129,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.randomvodkagenerator.Main" />
+    <configuration name="Tests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.randomvodkagenerator.rngs.Tests" />
       <module name="RandomVodkaGenerator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.randomvodkagenerator.*" />
+          <option name="PATTERN" value="com.example.randomvodkagenerator.rngs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,19 +155,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Demo" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="JAR Application.RandomVodkaGenerator.jar" />
       <item itemvalue="JAR Application.RandomVodkaGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar" />
       <item itemvalue="JAR Application.RandomVodkaGenerator-1.0-SNAPSHOT.jar" />
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Tests" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Tests" />
         <item itemvalue="JAR Application.RandomVodkaGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar" />
         <item itemvalue="JAR Application.RandomVodkaGenerator-1.0-SNAPSHOT.jar" />
         <item itemvalue="JAR Application.RandomVodkaGenerator.jar" />
-        <item itemvalue="Application.Demo" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +186,8 @@
       <workItem from="1649964009333" duration="11140000" />
       <workItem from="1649982608818" duration="5699000" />
       <workItem from="1650067708548" duration="16698000" />
-      <workItem from="1650148955903" duration="3428000" />
+      <workItem from="1650148955903" duration="3818000" />
+      <workItem from="1650316324698" duration="4871000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1648869915230</created>
@@ -281,7 +280,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650152321450</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add UML diagram">
+      <created>1650152636339</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1650152636339</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add UML diagram">
+      <created>1650152702648</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1650152702648</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +306,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Init" />
     <MESSAGE value="Extract BasicNumberGeneratorBehaviour" />
     <MESSAGE value="Basic Generator functionality done" />
@@ -303,7 +317,8 @@
     <MESSAGE value="Cleanup" />
     <MESSAGE value="Packinging Complete" />
     <MESSAGE value="Package into Fat Jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Package into Fat Jar" />
+    <MESSAGE value="Add UML diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add UML diagram" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -314,11 +329,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/Validator.java</url>
           <line>116</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/Demo.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/CombinedMultiplicativeNumberGenerator.java</url>

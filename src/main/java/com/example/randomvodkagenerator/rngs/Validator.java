@@ -167,7 +167,7 @@ public class Validator {
     /**
      * Smirnov Validation for a set of generated values.
      */
-    public static boolean Smirnov(ArrayList<Float> vals, float a) {
+    public static boolean Smirnov(ArrayList<Float> vals, double a) {
         Collections.sort(vals);
         int n = vals.size();
         // find max D+ and max d-
