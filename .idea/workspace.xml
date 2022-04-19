@@ -10,11 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73da6a0f-839e-4be5-8a2d-ffe5c9b30c3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/Tests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +40,13 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/Main.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/Tests.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/Menu.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/CombinedMultiplicativeNumberGenerator.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/randomvodkagenerator/rngs/Validator.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -79,6 +84,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15429688" />
@@ -115,7 +121,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JAR Application.RandomVodkaGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.randomvodkagenerator.Main" />
       <module name="RandomVodkaGenerator" />
@@ -163,9 +169,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.RandomVodkaGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Tests" />
-        <item itemvalue="JAR Application.RandomVodkaGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar" />
         <item itemvalue="JAR Application.RandomVodkaGenerator-1.0-SNAPSHOT.jar" />
         <item itemvalue="JAR Application.RandomVodkaGenerator.jar" />
       </list>
@@ -187,7 +193,7 @@
       <workItem from="1649982608818" duration="5699000" />
       <workItem from="1650067708548" duration="16698000" />
       <workItem from="1650148955903" duration="3818000" />
-      <workItem from="1650316324698" duration="4871000" />
+      <workItem from="1650316324698" duration="6985000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1648869915230</created>
@@ -294,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650152702648</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add tests and menu">
+      <created>1650321539126</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1650321539126</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +331,8 @@
     <MESSAGE value="Packinging Complete" />
     <MESSAGE value="Package into Fat Jar" />
     <MESSAGE value="Add UML diagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add UML diagram" />
+    <MESSAGE value="Add tests and menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tests and menu" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
